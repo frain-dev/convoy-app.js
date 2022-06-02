@@ -1,0 +1,130 @@
+div.dashboard-page
+    div.dashboard--page--head.margin-buttom__20px
+        h3.margin-bottom__10px Endpoints
+        button.button.button__primary.button__small
+
+    div.dashboard-page--details
+        div.card.has-title.dashboard-page--endpoints
+            table.table.table__no-style
+                thead
+                    tr.table--head
+                        each val in ['Endpoint URL', 'Created At', 'Updated At', 'Endpoint Events', 'Status']
+                            th= val
+
+                tbody
+                    tr.has-border
+                        td.has-long-text.longer
+                            div https://google.com
+                        td
+                            div 12th May, 2020
+                        td
+                            div 18th Feb, 2020
+                        td
+                            div.flex.flex__wrap
+                                div.tag events
+                        td
+                            div
+                                div.tag active
+
+            div.empty-state
+                p No endpoints to show here
+
+
+    section.card.has-title.dashboard--logs
+        div.dashboard--logs--tabs
+            div.tabs
+                each val in ['events', 'event deliveries']
+                    li
+                        button
+                            span= val
+
+        //- div.dashboard--logs--filter
+        //-     div
+        //-         div.flex.flex__align-items-center.flex__justify-between
+        //-             div.flex.flex__align-items-center
+        //-                 div.dropdown
+        //-                     buttom.button__filter.button--has--icon.icon-left.icon-right
+
+        div.flex
+            div.dashboard--logs--table
+                div.table.table--container
+                    table#events-table
+                        thead
+                            tr.table--head
+                                each val in ['Event Type', 'App Name', 'Created At', '']
+                                    th(scope="col")= val
+                            tr.table--date-row
+                                td
+                                    div 19th May, 2020
+                                td
+                                td
+                                td
+                            tr
+                                td
+                                    div
+                                        div.tag payment.success
+                                td.has-long-text
+                                    div Event Title
+                                td
+                                    div 12th May, 2020
+                                td
+                                    div
+                                        button.button.button__clear.button--has-icon Deliveries
+
+                    div.table--load-more.button--container.center
+                        button.button.button__clear.button--has-icon.icon-left.margin-top__20px.margin-bottom__24px.flex__justify-center Load more
+
+                div.empty-state.table--container
+                    p No event to show here
+
+            div.dashboard--logs--details
+                h3 Details
+
+                ul.dashboard--logs--details--meta
+                    li.list-item-inline
+                        div.list-item-inline--label IP Address
+                        div.list-item-inline--item.color 1234.443.332
+                    li.list-item-inline
+                        div.list-item-inline--label HTTP Status
+                        div.list-item-inline--item.color 200 OK
+                    li.list-item-inline
+                        div.list-item-inline--label API Version
+                        div.list-item-inline--item.color 12-02-2020
+                    li.list-item-inline
+                        div.list-item-inline--label Endpoint
+                        div.list-item-inline--item.color http://google.com
+                    li.list-item-inline
+                        div.list-item-inline--label Next Retry
+                        div.list-item-inline--item.color 12-02-2020
+                    li.list-item-inline
+                        div.list-item-inline--label App Name
+                        div.list-item-inline--item.color Number One
+
+                ul.tabs.tabs__logs
+                    each val in [{ id: 'data', label: 'Event' }, { id: 'response', label: 'Response' }, { id: 'request', label: 'Request' }]
+                        li
+                            button= val.label
+
+                div.dashboard--logs--details--req-res
+                    div.dashboard--logs--details--tabs-data
+                        h4 Event
+
+                    div.dashboard--logs--details--tabs-data
+                        h4 Header
+
+                        h4 Body
+
+                    div.dashboard--logs--details--tabs-data
+                        h4 Header
+
+                h4 Deliveries Overview
+                ul.dashboard--logs--details--endpoints.inline
+                    li
+                        div.tag.tag--Success Success
+                        div.url http://google.com
+                    li
+                        div.tag.tag--Success Success
+                        div.url http://google.com
+
+
+
