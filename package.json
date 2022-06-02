@@ -1,6 +1,6 @@
 {
-	"name": "pug-boilerplate",
-	"version": "1.0.0",
+	"name": "convoy-app-portal.js",
+	"version": "0.0.1",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
@@ -9,14 +9,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/savaslabs/pug-boilerplate.git"
+		"url": "git+https://github.com/frain-dev/convoy.git"
 	},
 	"author": "",
 	"license": "GPL-3.0",
 	"bugs": {
-		"url": "https://github.com/savaslabs/pug-boilerplate/issues"
+		"url": "https://github.com/frain-dev/convoy/issues"
 	},
-	"homepage": "https://github.com/savaslabs/pug-boilerplate#readme",
+	"homepage": "https://github.com/frain-dev/convoy#readme",
 	"devDependencies": {
 		"browser-sync": "^2.26.13",
 		"fs": "0.0.1-security",
