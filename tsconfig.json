@@ -13,8 +13,10 @@
 		"declaration": false,
 		"sourceMap": true,
 		"noImplicitAny": true,
-		"alwaysStrict": true
+		"alwaysStrict": true,
+		"allowJs": true
 	},
 	"exclude": ["node_modules", "src/**/pre-*.ts"],
-	"include": ["src"]
+	"include": ["src"],
+	"downlevelIteration": true
 }
