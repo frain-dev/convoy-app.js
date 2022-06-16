@@ -25,15 +25,13 @@ export class Convoy {
 	}
 
 	public async initAppPortal(domSelector?: string) {
-		console.log(document.querySelector(domSelector || '#convoy-app'));
-
 		document.querySelector(domSelector || '#convoy-app').innerHTML = `<iframe src="${this.options.uri}/app/${this.options.api_key}" frameborder="0" style="width: 100%; height: 100vh"></iframe>`;
 		return;
 	}
 
 	public async createSubscription(domSelector?: string) {
 		document.querySelector(
-			domSelector || '#convoy-app'
+			domSelector || '#convoy-create-sub'
 		).innerHTML = `<iframe id="convoy-create-subscription-modal" src="${this.options.uri}/app/${this.options.api_key}/subscriptions/new" frameborder="0" style="width: 100%; height: 100%; position: fixed; top: 0; left: 0; right: 0; bottom: 0;"></iframe>`;
 		return;
 	}
