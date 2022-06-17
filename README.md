@@ -15,7 +15,7 @@ npm i convoy-app.js
 Or preferrably through a CDN from [jsDelivr](https://www.jsdelivr.com/package/npm/convoy-app.js)
 
 ```
-https://www.jsdelivr.com/package/npm/convoy-app.js
+https://cdn.jsdelivr.net/npm/convoy-app.js@0.0.1/dist/bundle.js
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ Convoy-app.js is compatible with all javascript frameworks and libraries. See in
 Import/link convoy-app to project
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/convoy-app.js@0.1.0/dist/bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/convoy-app.js@0.0.1/dist/bundle.js"></script>
 ```
 
 Or
@@ -87,7 +87,7 @@ Lastly, you need to add the repective selector elements to your HTML
 ### Vanilla Javascript
 ```html
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/convoy-app.js@0.1.0/dist/bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/convoy-app.js@0.0.1/dist/bundle.js"></script>
     <!-- or -->
     <script src="node_modules/convoy-app.js/dist/bundle.js"></script>
 </head>
@@ -110,7 +110,7 @@ Lastly, you need to add the repective selector elements to your HTML
 ### Typescript Project
 ```html
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/convoy-app.js@0.1.0/dist/bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/convoy-app.js@0.0.1/dist/bundle.js"></script>
     <!-- or -->
     <script src="node_modules/convoy-app.js/dist/bundle.js"></script>
 </head>
