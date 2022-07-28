@@ -45,15 +45,6 @@ export class EventDelivery {
 		}
 	}
 
-	async getDeliveryAttempt(id: string, query?: any) {
-		try {
-			const { data } = await this.client.httpRequest({ path: `/eventdeliveries/${id}/deliveryattempts`, query, method: 'get' });
-			return data;
-		} catch (error) {
-			ResponseHelper.handleErrors(error);
-		}
-	}
-
 	async resend(id: string, query?: any) {
 		try {
 			const { data } = await this.client.httpRequest({ path: `/eventdeliveries/${id}/resend`, query, method: 'put' });
