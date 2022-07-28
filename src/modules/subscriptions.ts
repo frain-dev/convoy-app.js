@@ -25,4 +25,13 @@ export class Subscription {
 			ResponseHelper.handleErrors(error);
 		}
 	}
+
+	async delete(id: string) {
+		try {
+			const { data } = await this.client.httpRequest({ path: `/subscriptions/${id}`, method: 'delete' });
+			return data;
+		} catch (error) {
+			ResponseHelper.handleErrors(error);
+		}
+	}
 }

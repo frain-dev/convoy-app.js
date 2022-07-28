@@ -11,7 +11,7 @@ export class Convoy {
 
 	public events;
 	public eventDeliveries;
-	public subsriptions;
+	public subscriptions;
 	public deliveryAttempts;
 
 	constructor(options: IConfig) {
@@ -20,7 +20,7 @@ export class Convoy {
 
 		this.events = new Event(this.client);
 		this.eventDeliveries = new EventDelivery(this.client);
-		this.subsriptions = new Subscription(this.client);
+		this.subscriptions = new Subscription(this.client);
 		this.deliveryAttempts = new DeliveryAttempt(this.client);
 	}
 

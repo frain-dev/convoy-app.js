@@ -15,8 +15,8 @@ export class Client {
 		});
 	}
 
-	public async httpRequest(requestDetails: { path: string; query?: any; method: 'get' | 'post' | 'put' | 'delete' }) {
-		return this.request[requestDetails.method](this.buildPath(requestDetails.path, requestDetails.query));
+	public async httpRequest(requestDetails: { path: string; query?: any; method: 'get' | 'post' | 'put' | 'delete'; body?: any }) {
+		return this.request[requestDetails.method](this.buildPath(requestDetails.path, requestDetails.query), requestDetails.body || null);
 	}
 
 	private buildPath(path: string, query: any) {
