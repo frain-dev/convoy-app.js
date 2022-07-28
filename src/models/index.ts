@@ -8,3 +8,7 @@ export interface IConfig {
 	 */
 	api_key: string;
 }
+
+export interface BatchResend {
+	ids: string[];
+}
