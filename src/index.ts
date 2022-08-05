@@ -24,8 +24,10 @@ export class Convoy {
 		this.deliveryAttempts = new DeliveryAttempt(this.client);
 	}
 
-	public async initAppPortal(domSelector?: string) {
-		document.querySelector(domSelector || '#convoy-app').innerHTML = `<iframe src="${this.options.uri}/app/${this.options.api_key}" frameborder="0" style="width: 100%; height: 100vh"></iframe>`;
+	public async initAppPortal(attributes: { domSelector?: string; canCreateSubscription: boolean }) {
+		document.querySelector(attributes.domSelector || '#convoy-app').innerHTML = `<iframe src="${this.options.uri}/app/${this.options.api_key}?createSub=${
+			attributes.canCreateSubscription ? 'true' : 'false'
+		}" frameborder="0" style="width: 100%; height: 100vh"></iframe>`;
 		return;
 	}
 
