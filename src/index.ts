@@ -4,6 +4,7 @@ import { EventDelivery } from './modules/event-deliveries';
 import { Event } from './modules/events';
 import { DeliveryAttempt } from './modules/delivery-attempt';
 import { Subscription } from './modules/subscriptions';
+import { Endpoint } from './modules/endpoints';
 
 export class Convoy {
 	private options: IConfig;
@@ -13,6 +14,7 @@ export class Convoy {
 	public eventDeliveries;
 	public subscriptions;
 	public deliveryAttempts;
+	public endpoints;
 
 	constructor(options: IConfig) {
 		this.options = options;
@@ -22,6 +24,7 @@ export class Convoy {
 		this.eventDeliveries = new EventDelivery(this.client);
 		this.subscriptions = new Subscription(this.client);
 		this.deliveryAttempts = new DeliveryAttempt(this.client);
+		this.endpoints = new Endpoint(this.client);
 	}
 
 	public async initAppPortal(domSelector?: string) {

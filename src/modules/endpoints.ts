@@ -1,7 +1,7 @@
 import { Client } from '../client';
 import { ResponseHelper } from '../utils/helpers/response-helper';
 
-export class Subscription {
+export class Endpoint {
 	private client: Client;
 
 	constructor(client: Client) {
@@ -10,7 +10,7 @@ export class Subscription {
 
 	async all(query?: any) {
 		try {
-			const { data } = await this.client.httpRequest({ path: `/subscriptions`, query, method: 'get' });
+			const { data } = await this.client.httpRequest({ path: `/endpoints`, query, method: 'get' });
 			return data;
 		} catch (error) {
 			ResponseHelper.handleErrors(error);
@@ -19,7 +19,7 @@ export class Subscription {
 
 	async get(id: string, query?: any) {
 		try {
-			const { data } = await this.client.httpRequest({ path: `/subscriptions/${id}`, query, method: 'get' });
+			const { data } = await this.client.httpRequest({ path: `/endpoints/${id}`, query, method: 'get' });
 			return data;
 		} catch (error) {
 			ResponseHelper.handleErrors(error);
@@ -28,7 +28,7 @@ export class Subscription {
 
 	async delete(id: string) {
 		try {
-			const { data } = await this.client.httpRequest({ path: `/subscriptions/${id}`, method: 'delete' });
+			const { data } = await this.client.httpRequest({ path: `/endpoints/${id}`, method: 'delete' });
 			return data;
 		} catch (error) {
 			ResponseHelper.handleErrors(error);
@@ -37,7 +37,7 @@ export class Subscription {
 
 	async create(body?: any) {
 		try {
-			const { data } = await this.client.httpRequest({ path: `/subscriptions/`, body, method: 'post' });
+			const { data } = await this.client.httpRequest({ path: `/endpoints/`, body, method: 'post' });
 			return data;
 		} catch (error) {
 			ResponseHelper.handleErrors(error);
