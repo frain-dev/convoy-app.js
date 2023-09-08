@@ -35,7 +35,7 @@ export class Endpoint {
 		}
 	}
 
-	async create(body?: any) {
+	async create(query?: any, body?: any) {
 		try {
 			const { data } = await this.client.httpRequest({ path: `/endpoints/`, body, method: 'post' });
 			return data;
