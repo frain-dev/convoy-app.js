@@ -37,7 +37,7 @@ export class Subscription {
 
 	async create(query?: any, body?: any) {
 		try {
-			const { data } = await this.client.httpRequest({ path: `/subscriptions/`, body, method: 'post' });
+			const { data } = await this.client.httpRequest({ path: `/subscriptions/`, query, body, method: 'post' });
 			return data;
 		} catch (error) {
 			ResponseHelper.handleErrors(error);

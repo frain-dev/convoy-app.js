@@ -37,7 +37,7 @@ export class Endpoint {
 
 	async create(query?: any, body?: any) {
 		try {
-			const { data } = await this.client.httpRequest({ path: `/endpoints/`, body, method: 'post' });
+			const { data } = await this.client.httpRequest({ path: `/endpoints/`, query, body, method: 'post' });
 			return data;
 		} catch (error) {
 			ResponseHelper.handleErrors(error);
