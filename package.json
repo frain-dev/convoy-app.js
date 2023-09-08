@@ -1,8 +1,9 @@
 {
 	"name": "convoy-app.js",
-	"version": "0.2.1",
+	"version": "0.2.3",
 	"description": "Convoy App Portal SDK",
 	"main": "dist/bundle.js",
+	"types": "dist/index.d.ts",
 	"scripts": {
 		"build": "webpack"
 	},

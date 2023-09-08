@@ -10,11 +10,12 @@
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"allowSyntheticDefaultImports": true,
-		"declaration": false,
+		"declaration": true,
 		"sourceMap": true,
 		"noImplicitAny": true,
 		"alwaysStrict": true,
-		"allowJs": true
+		"allowJs": true,
+		"declarationMap": true
 	},
 	"exclude": ["node_modules", "src/**/pre-*.ts"],
 	"include": ["src"],
