@@ -43,4 +43,13 @@ export class Subscription {
 			ResponseHelper.handleErrors(error);
 		}
 	}
+
+	async update(id: string, body?: any) {
+		try {
+			const { data } = await this.client.httpRequest({ path: `/subscriptions/${id}`, body, method: 'put' });
+			return data;
+		} catch (error) {
+			ResponseHelper.handleErrors(error);
+		}
+	}
 }
