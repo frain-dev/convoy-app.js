@@ -7,7 +7,7 @@ export class Client {
 
 	constructor(options: IConfig) {
 		this.request = axios.create({
-			baseURL: (options.uri || this.baseUri) + '/portal',
+			baseURL: (options.uri || this.baseUri) + '/portal-api',
 			headers: {
 				Authorization: `Bearer ${options.api_key}`,
 				'Content-Type': 'application/json'
