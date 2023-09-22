@@ -52,4 +52,13 @@ export class Subscription {
 			ResponseHelper.handleErrors(error);
 		}
 	}
+
+	async testFilter(query?: any, body?: any) {
+		try {
+			const { data } = await this.client.httpRequest({ path: `/subscriptions/test_filter`, query, body, method: 'post' });
+			return data;
+		} catch (error) {
+			ResponseHelper.handleErrors(error);
+		}
+	}
 }
